@@ -1,0 +1,6 @@
+vi [name].txt: opens files in vi
+i: starts editing
+esc: stops editing
+:[#]: jumps to a specific line in text editor
+:w : saves file
+:q : quits text editor
