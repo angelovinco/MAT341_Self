@@ -1,4 +1,10 @@
 Notes on Terminal Commands
 
-ls: lists every file/folder in direction
-cd:  
+ls: lists every file/folder in directory
+cd [folder]: changes directory
+cd ..: goes back one directory
+clear: clears terminal window but does not erase progress
+ls -a: shows all files and directories, including hidden ones
+pwd: names current directory
+mkdir: creates a new directory
+history: shows all previous commands
