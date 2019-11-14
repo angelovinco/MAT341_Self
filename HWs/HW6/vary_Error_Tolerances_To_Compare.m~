@@ -33,8 +33,8 @@ legend('Fixed Step','Barzilai-Borwein');
 %
 % The advantage of using the Barzilai-Borwein step size is that it will
 % take less iterations to find the minimum of a function compared to the
-% fixed step size. Also, when you are given a different function, you do
-% not need to find a new optimal step size to minimize the iterations. 
+% fixed step size. Also, when you are given a different function, you do no
+%
 %
 % You would want to use the Barzilai-Borwein method since you can just pick
 % a gamma instead of finding the best gamma for the fixed step size.
