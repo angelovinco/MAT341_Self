@@ -20,7 +20,7 @@ while err > tol
     x1 = x0 - gamma * G(x0);
     
     % calculates l2 - norm error
-    err = sqrt((x1-x0).'*(x1-x0));
+    err = sqrt((x1-x0).'*(x1-x0)); 
     
     % calculates  Barzilai-Borwein step size
     gamma = ( abs( (x1-x0).' * (G(x1) - G(x0))) / ((G(x1) - G(x0)).' * (G(x1) - G(x0)) ));
