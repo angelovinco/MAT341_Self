@@ -1,7 +1,10 @@
 function fit_Sine_Series()
 
 % initalizes M
-M = 5;
+% M = 5;
+% M = 10;
+% M = 20;
+ M = 40;
 
 % initalizes # of points and data points
 N = 500;
@@ -44,11 +47,16 @@ for i = 1:N
 end
 
 % plots data points and the line of best fit
-plot(xData,f,'red','MarkerSize',4)
+plot(xData,yData,'b-','LineWidth',6)
 hold on;
-plot(xData,yData,'b.','MarkerSize',6)
-legend('Best Sine Series Fit','Data')
+plot(xData,f,'r-','LineWidth',4)
+xlabel('x');
+ylabel('y');
+legend('Data','Best Sine Series Fit')
 hold off;
+
+% prints beta coefficients
+beta
 
 % calculates residual
 res = B - A*beta;
@@ -58,7 +66,13 @@ l2_err = sqrt(res'*res)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% l2 norm error for the residual for:
+% M=5: 0.0813
+% M=10: 0.0096
+% M=20: 2.1412e-6
+% M=40: 3.9199e-9
 %
+% Fourier sine series
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%
         

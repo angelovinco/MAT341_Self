@@ -1,6 +1,6 @@
 function perform_NonLinear_Least_Squares()
 
-% initalizes # of points and data points
+% initalizes # of points and data points and plots the data points
 N = 2500;
 data = give_NonLinear_Least_Squares_Data(N);
 xData = data(:,1);
@@ -21,7 +21,7 @@ while err > tol
         x = xData(i);
         
         % calculates the expontent part with the beta 
-        expy = exp((-(x-B(2))^2)/(2*(B(2)^2)));
+        expy = exp((-(x-B(2))^2)/(2*(B(3)^2)));
         
         % calculates jacobian
         J(i,1) = expy;
@@ -62,8 +62,9 @@ end
 % prints optimized beta
 B
 
-% prints l2 norm error
-err
+% calculates the residual and prints l2 norm 
+res = y - f;
+l2 = sqrt(res'*res)
 
 % plots data and line of best fit
 plot(xData,f,'red','LineWidth',4);

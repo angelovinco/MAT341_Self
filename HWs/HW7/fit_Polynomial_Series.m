@@ -1,10 +1,9 @@
 function fit_Polynomial_Series()
 
-
 % initializes # of points and data points
 %N = 10;
-N = 50;
-%N = 250;
+%N = 50;
+N = 250;
 xData = linspace(-2*pi,2*pi,N);
 yData = cos(xData)';
 
@@ -43,11 +42,16 @@ for i = 1:N
 end
 
 % plots the data and the line of best fit
-plot(xData,f,'red','MarkerSize',4)
-hold on;
-plot(xData,yData,'b.','MarkerSize',6)
-legend('Best Poly Fit','Data')
+plot(xData,yData,'b-','LineWidth',6)
+hold on
+plot(xData,f,'r-','LineWidth',4)
+legend('Data','Best Polyfit')
+xlabel('x');
+ylabel('y');
 hold off;
+
+% prints beta coefficients
+beta
 
 % calculates residual
 res = B - A*beta;
@@ -57,14 +61,19 @@ l2_err = sqrt(res'*res)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% As N increases, the residual gets smaller. Are you asking for residual or
-% l2 norm.
+% l2 norm error of the residual for:
+% N=10: 2.7347
+% N=50: 5.15e-4
+% N=250: .0011
 %
-% Calc B? Taylor Series? Beta?
+% We have seen cosx written as a polynomial as a Taylor Series
+% The coeffients are 1, 0, -1/2!, 0, 1/4!, 0, -1/6!, 0, 1/8!, 0, -1/10!
+% 0, 1/12!
 %
-% I dont know
+% .9999, 0.00, -.4998, -0.00, .0416, 0.00, -0.0014, -0.00, 0.00, 0.00,
+% -0.00, -0.00, 0.00
 % 
-% Maybe
+% yes, they are about the same coefficents
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         

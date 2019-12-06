@@ -87,8 +87,10 @@ while n > 1
     B = A;
 end
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% what i did to viusalize things
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % B = A;
 
